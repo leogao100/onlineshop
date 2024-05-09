@@ -1,0 +1,24 @@
+#Dependency directories
+node_modules/
+
+# Environment configuration files
+.env
+
+# Log files
+*.log
+
+# Production build files
+dist/
+
+# MacOS system files
+.DS_Store
+
+# Editor directories and files
+.vscode/
+*.sublime-workspace
+
+# Packaged resource files that might be generated
+/public/assets/
+
+# Temporary database files
+*.sqlite
