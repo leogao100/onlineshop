@@ -22,3 +22,6 @@ dist/
 
 # Temporary database files
 *.sqlite
+
+#ignore the other folder
+other/
