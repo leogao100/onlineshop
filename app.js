@@ -15,7 +15,7 @@ const MONGODB_URI = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSW
 const app = express();
 const store = new MongoDBStore({
   uri: MONGODB_URI,
-  collection: "sessions"
+  collection: "sessions",
 });
 
 app.set("view engine", "ejs");
@@ -37,7 +37,10 @@ app.use(
 );
 
 app.use((req, res, next) => {
-  User.findById("6641e427739dd808e4ab1cf3")
+  if (!req.session.user) {
+    return next();
+  }
+  User.findById(req.session.user._id)
     .then((user) => {
       req.user = user;
       next();
@@ -62,18 +65,6 @@ mongoose.connection.on("error", (err) => {
 mongoose
   .connect(MONGODB_URI)
   .then(() => {
-    User.findOne().then((user) => {
-      if (!user) {
-        const user = new User({
-          name: "Leo",
-          email: "gaoleiccie@gmail.com",
-          cart: {
-            items: [],
-          },
-        });
-        user.save();
-      }
-    });
     app.listen(3000, () => {
       console.log("Server started on port 3000");
     });
