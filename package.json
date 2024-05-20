@@ -24,9 +24,12 @@
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.18.0",
+    "express-validator": "^7.0.1",
     "mongodb": "^6.6.1",
     "mongoose": "^8.3.4",
     "mysql2": "^3.9.7",
+    "nodemailer": "^6.9.13",
+    "nodemailer-sendgrid-transport": "^0.2.0",
     "pug": "^2.0.3",
     "sequelize": "^6.37.3"
   }
