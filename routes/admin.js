@@ -21,7 +21,7 @@ router.post(
       .isAlphanumeric()
       .isLength({ min: 3 })
       .trim(),
-    body("imageUrl").isURL().withMessage("Please write a valid URL"),
+    // body("imageUrl").isURL().withMessage("Please write a valid URL"),
     body("price").isFloat().withMessage("Please write a valid price"),
     body("description")
       .isLength({ min: 5, max: 400 })
@@ -41,7 +41,7 @@ router.post(
       .isAlphanumeric()
       .isLength({ min: 3 })
       .trim(),
-    body("imageUrl").isURL().withMessage("Please write a valid URL"),
+    // body("imageUrl").isURL().withMessage("Please write a valid URL"),
     body("price").isFloat().withMessage("Please write a valid price"),
     body("description")
       .isLength({ min: 5, max: 400 })
