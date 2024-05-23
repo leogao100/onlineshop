@@ -25,3 +25,5 @@ dist/
 
 #ignore the other folder
 other/
+imgs/
+*.pdf
