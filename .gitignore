@@ -27,3 +27,7 @@ dist/
 other/
 imgs/
 *.pdf
+server.cert
+server.key
+error-playground.js
+access.log
